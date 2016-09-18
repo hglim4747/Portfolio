@@ -7,19 +7,24 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       works: consts.works,
+      yyyy: 2016,
     };
+
+    // setTimeout(() => {
+    //   this.setState({ yyyy: 2015 });
+    // }, 5000);
   }
   render() {
-    const { works } = this.state;
+    const { works, yyyy } = this.state;
     const boards = [];
-    Object.keys(works).forEach((key) => {
-      boards.push(
-        <Year key={`year${key}`} yyyy={key} year={works[key]} />
-      );
-    });
+    // Object.keys(works).forEach((key) => {
+    //   boards.push(
+    //     <Year key={`year${key}`} yyyy={key} year={works[key]} />
+    //   );
+    // });
     return (
       <div>
-        {boards}
+        <Year key={`year${yyyy}`} yyyy={yyyy} year={works[yyyy]} />
       </div>
     );
   }
