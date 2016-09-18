@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import consts from '../../../consts';
-import Board from './Board';
+import Year from './Year';
 
 class Portfolio extends Component {
   constructor(props) {
@@ -12,9 +12,9 @@ class Portfolio extends Component {
   render() {
     const { works } = this.state;
     const boards = [];
-    Object.keys(works).forEach((row, index) => {
+    Object.keys(works).forEach((key) => {
       boards.push(
-        <Board key={`board${index}`} workKey={row} />
+        <Year key={`year${key}`} yyyy={key} year={works[key]} />
       );
     });
     return (
