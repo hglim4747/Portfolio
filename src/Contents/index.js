@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Portfolio from './Portfolio/index';
 import PortfolioHeader from './Header/PortfolioHeader';
+import Portfolio from './Portfolio';
 
 const style = {
   paddingLeft: 20,
@@ -18,6 +18,7 @@ const style = {
 
 class Contents extends Component {
   render() {
+    console.log(this.props);
     return (
       <div style={style}>
         <PortfolioHeader />

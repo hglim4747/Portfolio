@@ -15,6 +15,10 @@ app.use(morgan('combined'));
 // app.use(bodyParser.json());
 
 app.use(express.static('./script'));
+app.get('*', (req, res) => {
+  res.render('../script/index.html');
+});
+
 app.engine('html', ejs.renderFile);
 app.set('view engine', 'html');
 app.listen(8080, () => console.log('Portfolio Open'));

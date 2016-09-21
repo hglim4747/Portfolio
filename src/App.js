@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
-import Contents from './Contents';
+import Left from './Left';
+import Header from './Header';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return(
       <div style={{ height: '100%' }}>
-        <Contents />
+        <div className="page-wrap" style={{ height: '100%' }} >
+          <Header />
+          <Left />
+          { this.props.children }
+        </div>
       </div>
     );
   }
