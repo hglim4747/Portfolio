@@ -7,7 +7,7 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       works: consts.works,
-      yyyy: 2016,
+      yyyy: 2012,
     };
 
     // setTimeout(() => {

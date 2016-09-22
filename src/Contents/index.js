@@ -3,17 +3,13 @@ import PortfolioHeader from './Header/PortfolioHeader';
 import Portfolio from './Portfolio';
 
 const style = {
-  paddingLeft: 20,
-  paddingTop: 40,
-  minWidth: 500,
-  maxWidth: '60%',
-  height: '93%',
+  padding: 40,
+  maxWidth: '1080px',
   margin: 'auto',
   background: 'white',
   borderLeftStyle: 'solid',
   borderRightStyle: 'solid',
   borderColor: 'antiquewhite',
-  overflow: 'scroll',
 };
 
 class Contents extends Component {

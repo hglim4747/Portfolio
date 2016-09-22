@@ -8,8 +8,8 @@ class App extends Component {
   }
   render() {
     return(
-      <div style={{ height: '100%' }}>
-        <div className="page-wrap" style={{ height: '100%' }} >
+      <div>
+        <div className="page-wrap">
           <Header />
           <Left />
           { this.props.children }

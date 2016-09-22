@@ -29,10 +29,10 @@ class Board extends Component {
 
     for (i = 0; i < clipNum; i += 1) {
       mp4Tags.push(
-        <div key={`clip${i}`} style={{ margin: 10 }}>
+        <div key={`clip${i}`} style={{ margin: 10, textAlign: 'center' }}>
           <video
             controls
-            style={{ maxWidth: '80%' }}
+            style={{ maxWidth: '100%' }}
           >
             <source src={`${consts.server}/media/${work.filter}/${i}.mp4`} type="video/mp4" />
             Your browser does not support the video tag
@@ -56,8 +56,8 @@ class Board extends Component {
 
     for (i = 0; i < jpgNum; i += 1) {
       jpgTags.push(
-        <div key={`jpgclip${i}`} style={{ margin: 10 }}>
-          <img src={`${consts.server}/media/${work.filter}/i${i}.jpg`} role="presentation" />
+        <div key={`jpgclip${i}`} style={{ margin: 10, textAlign: 'center' }}>
+          <img src={`${consts.server}/media/${work.filter}/i${i}.jpg`} role="presentation" style={{ maxWidth: '100%' }} />
         </div>
       );
     }
@@ -66,7 +66,7 @@ class Board extends Component {
 
 
   render() {
-    const { name } = this.state.work;
+    const { name, type, target, description } = this.state.work;
     const { open } = this.state;
 
     return (
@@ -75,19 +75,41 @@ class Board extends Component {
           style={{
             background: '#ffe4dc',
             padding: 10,
-            fontWeight: 'bold',
           }}
         >
-          { name }
+          <div style={{ display: 'block' }}>
+            <div style={{ fontWeight: 'bold', display: 'inline-block', marginLeft: '15' }}>
+              { name }
+            </div>
+            <div style={{ display: 'inline-block', marginLeft: '15' }}>
+              {type}
+            </div>
+          </div>
         </div>
-
+        <div style={{ padding: 8 }}>
+          <div style={{ color: 'orange', fontWeight: 'bold' }}>
+            목표
+          </div>
+          <hr style={{ margin: 5, borderColor: 'orange' }} />
+          <div style={{ padding: 10 }}>
+            {target}
+          </div>
+          <br />
+          <div style={{ color: 'orange', fontWeight: 'bold' }}>
+            설명
+          </div>
+          <hr style={{ margin: 5, borderColor: 'orange' }} />
+          <div style={{ padding: 10 }}>
+            {description}
+          </div>
+        </div>
         <div style={{ padding: 10, background: 'white', textAlign: 'end' }}>
           <Button
             bsStyle="warning"
             onClick={this.handleOpen}
             style={{ width: '150px' }}
           >
-            영상펼치기
+            {open ? '영상접기' : '영상펼치기'}
           </Button>
         </div>
 

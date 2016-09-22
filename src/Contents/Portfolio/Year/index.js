@@ -20,7 +20,9 @@ class Year extends Component {
     });
     return (
       <div>
-        {yyyy}
+        <div style={{ fontSize: '2.4rem', fontWeight: 'bold', color: '#ff5400' }}>
+          {yyyy}년 활동
+        </div>
         {boards}
       </div>
     );

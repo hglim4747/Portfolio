@@ -106,7 +106,7 @@ const y2012 = {
     name: 'Glow(수행평가)',
     filter: '9-Glow(수행평가)',
     clipNum: 4,
-    type: '기말과제',
+    type: '게임개발',
     target: '과제',
     description: '선린인터넷고 게임개발 과목의 기말과제입니다. 특이한 컨셉의 디자인을 시도해 보았습니다.',
   },
@@ -143,7 +143,7 @@ const y2014 = {
     name: '한장받고한장더',
     filter: '11-한장받고한장더',
     clipNum: 3,
-    type: '게임잼 (행사)',
+    type: '게임잼',
     target: '온오프믹스 게임잼',
     description: '게임잼에서 하룻밤 동안 만든 모바일 게임으로, 재미는 있지만 사행성과 저작권문제(캐릭터)로 인해 출시하진 않았습니다.',
     moreInfo: [
@@ -156,7 +156,7 @@ const y2014 = {
     name: '테트리스(AI)',
     filter: '12-테트리스(AI)',
     clipNum: 1,
-    type: '기말과제',
+    type: 'C++, AI',
     target: '객체지향 프로그래밍 기말과제',
     description: '1학년 강의에서 주어진 객체지향적인 테트리스를 만드는 기말 프로젝트 에서, 테트리스 인공지능을 사용하여 주목을 받았습니다.',
     moreInfo: [
@@ -170,7 +170,7 @@ const y2014 = {
     filter: '13-링그렛츠',
     clipNum: 0,
     jpgNum: 1,
-    type: '근무',
+    type: '게임회사 근무',
     target: '게임 어플리케이션 개발',
     description: '겨울방학 기간 동안 링그렛츠 회사에 근무하며 게임개발을 하였습니다.',
     moreInfo: [
@@ -182,11 +182,11 @@ const y2014 = {
 
 const y2015 = {
   0: {
-    name: 'Johnny(원격알람앱)',
-    filter: '14-Johnny(원격알람앱)',
+    name: 'Johnny',
+    filter: '14-Johnny',
     clipNum: 0,
     jpgNum: 2,
-    type: '서울어코드 공모전',
+    type: '서버개발 및 안드로이드',
     target: '원격 알람 서비스 어플리케이션 개발',
     description: '알람을 주고 받을 수 있는 메신저 앱으로, 처음으로 서버 개발을 맡게 된 프로젝트입니다.',
     moreInfo: [
@@ -200,7 +200,7 @@ const y2015 = {
     name: '자구야놀자',
     filter: '15-자구야놀자',
     clipNum: 1,
-    type: '기말과제 (게임개발)',
+    type: '게임개발',
     target: '윈도우즈 프로그래밍 기말과제',
     description: 'MFC를 이용한 자유과제 입니다. 우리 조는 MFC에 DirectX를 연결하여 자료구조 교육 게임을 만들었습니다.',
     moreInfo: [
@@ -210,10 +210,10 @@ const y2015 = {
     ],
   },
   2: {
-    name: '땅따먹기인공지능',
+    name: '인공지능 대결',
     filter: '16-땅따먹기인공지능',
     clipNum: 1,
-    type: '기말 프로젝트 (인공지능)',
+    type: '인공지능',
     target: '인공지능 리그',
     description: 'Min-Max-Tree를 이용하여, 땅따먹기 게임(삼각형을 많이 그리면 이김)의 인공지능을 구현하고 다른 팀의 인공지능과 대결 하였습니다.',
     moreInfo: [
@@ -223,10 +223,10 @@ const y2015 = {
     ],
   },
   3: {
-    name: '컴퓨터그래픽스과제',
+    name: '도시만들기',
     filter: '17-컴퓨터그래픽스과제',
     jpgNum: 1,
-    type: '기말 프로젝트 (컴퓨터 그래픽스)',
+    type: '컴퓨터 그래픽스',
     target: '컴퓨터 그래픽스 기말과제',
     description: 'OpenGL을 사용하여 도시를 랜더링하고 셰이딩(플랫, 고로, 퐁)을 하는 등의 과제를 구현하였습니다.',
     moreInfo: [
@@ -238,10 +238,10 @@ const y2015 = {
 
 const y2016 = {
   0: {
-    name: '당주행(기말프로젝트)',
+    name: '당주행',
     filter: '18-당주행(기말프로젝트)',
     jpgNum: 2,
-    type: '기말 프로젝트 (모바일 프로그래밍)',
+    type: '모바일 프로그래밍',
     target: '모바일 프로그래밍 기말 프로젝트',
     description: '네이버, 지도, 서울시 API 등을 통해 현재 내 위치에서 가까운 행사들의 정보를 제공해주고, 본인의 행사를 업로드할 수 있는 어플리케이션을 개발했습니다.',
     moreInfo: [
@@ -254,8 +254,8 @@ const y2016 = {
     name: 'SkinLog',
     filter: '19-SkinLog',
     clipNum: 2,
-    type: '기말 프로젝트 (모바일 프로그래밍)',
-    target: '산학 협동 프로그래밍 기말 프로젝트',
+    type: '기말 프로젝트',
+    target: '유니티 소프트웨어 개발',
     description: '피부상태를 측정하는 장치와 연결하여 피부의 상태를 받아온 뒤 유저들의 피부 상태를 캐릭터나 도표 등으로 시각적으로 출력 해 주는 프로젝트의 데모입니다.',
     moreInfo: [
       { 팀원: '5명' },

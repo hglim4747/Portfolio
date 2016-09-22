@@ -5,6 +5,7 @@ import SelectButtons from './Components/SelectButtons';
 const style = {
   textAlign: 'center',
   height: '100%',
+  width: '100%',
 };
 
 class Left extends Component {
@@ -20,10 +21,12 @@ class Left extends Component {
     return (
       <div
         onClick={() => this.setState({ menu: !menu })}
+        // style={{ position: 'fixed', height: '100%', width: '33.3%', maxWidth: '256px', display: menu ? 'initial' : 'none' }}
+        style={{ position: 'fixed', height: '100%', width: '33.3%', maxWidth: '256px' }}
       >
         <Drawer
-          style={{ position: 'absolute', height: '93%' }}
-          containerStyle={{ position: 'relative' }}
+          style={{ height: '100%', width: '100%' }}
+          containerStyle={{ position: 'relative', width: 'initial', overflow: 'hidden' }}
           open={menu}
         >
           <div style={style}>
@@ -41,6 +44,7 @@ class Left extends Component {
                   style={{
                     backgroundColor: 'whitesmoke',
                     padding: '3px 12px',
+                    width: '100%',
                   }}
                 />
               </div>
@@ -55,6 +59,7 @@ class Left extends Component {
                       backgroundColor: 'whitesmoke',
                       padding: '3px',
                       borderRadius: '50%',
+                      width: '100%',
                     }}
                   />
                   <hr style={{ marginBottom: 0 }} />
