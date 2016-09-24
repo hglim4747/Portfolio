@@ -57,7 +57,7 @@ class Board extends Component {
     for (i = 0; i < jpgNum; i += 1) {
       jpgTags.push(
         <div key={`jpgclip${i}`} style={{ margin: 10, textAlign: 'center' }}>
-          <img src={`${consts.server}/media/${work.filter}/i${i}.jpg`} role="presentation" style={{ maxWidth: '100%' }} />
+          <img src={`/${consts.server}/media/${work.filter}/i${i}.jpg`} role="presentation" style={{ maxWidth: '100%' }} />
         </div>
       );
     }
