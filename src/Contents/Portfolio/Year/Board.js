@@ -34,7 +34,7 @@ class Board extends Component {
             controls
             style={{ maxWidth: '100%' }}
           >
-            <source src={`${consts.server}/media/${work.filter}/${i}.mp4`} type="video/mp4" />
+            <source src={`/${consts.server}/media/${work.filter}/${i}.mp4`} type="video/mp4" />
             Your browser does not support the video tag
           </video>
         </div>
@@ -78,10 +78,10 @@ class Board extends Component {
           }}
         >
           <div style={{ display: 'block' }}>
-            <div style={{ fontWeight: 'bold', display: 'inline-block', marginLeft: '15' }}>
+            <div style={{ fontWeight: 'bold', display: 'inline-block', marginLeft: 15 }}>
               { name }
             </div>
-            <div style={{ display: 'inline-block', marginLeft: '15' }}>
+            <div style={{ display: 'inline-block', marginLeft: 15 }}>
               {type}
             </div>
           </div>
@@ -118,7 +118,7 @@ class Board extends Component {
           {this.getImages()}
         </Panel>
 
-        <hr style={{ marginTop: 0 }} />
+        <hr style={{ marginTop: 0, marginBottom: 70 }} />
       </div>
     );
   }

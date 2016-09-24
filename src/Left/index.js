@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Drawer from 'material-ui/Drawer';
+import { connect } from 'react-redux';
 import SelectButtons from './Components/SelectButtons';
-
+import { setNavigationOpen } from '../action';
 const style = {
   textAlign: 'center',
   height: '100%',
@@ -9,25 +10,18 @@ const style = {
 };
 
 class Left extends Component {
-  constructor() {
-    super();
-    this.state = {
-      menu: true,
-    };
-  }
-
   render() {
-    const { menu } = this.state;
+    const menu = this.props.navigationOpen;
     return (
       <div
-        onClick={() => this.setState({ menu: !menu })}
-        // style={{ position: 'fixed', height: '100%', width: '33.3%', maxWidth: '256px', display: menu ? 'initial' : 'none' }}
-        style={{ position: 'fixed', height: '100%', width: '33.3%', maxWidth: '256px' }}
+        style={{ position: 'fixed', height: '100%', width: '33.3%', maxWidth: '256px', zIndex: menu ? 99999 : -1 }}
       >
         <Drawer
           style={{ height: '100%', width: '100%' }}
           containerStyle={{ position: 'relative', width: 'initial', overflow: 'hidden' }}
           open={menu}
+          docked={false}
+          onRequestChange={() => this.props.dispatch(setNavigationOpen(false))}
         >
           <div style={style}>
             <div
@@ -76,4 +70,11 @@ class Left extends Component {
   }
 }
 
-export default Left;
+function map(state) {
+  const {
+    portfolio,
+  } = state;
+  return portfolio;
+}
+
+export default connect(map)(Left);

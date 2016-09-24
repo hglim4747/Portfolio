@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import consts from '../../../consts';
-import Year from './Year';
+import { connect } from 'react-redux';
 
+import Year from './Year';
 class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
       works: consts.works,
-      yyyy: 2012,
     };
-
-    // setTimeout(() => {
-    //   this.setState({ yyyy: 2015 });
-    // }, 5000);
   }
   render() {
-    const { works, yyyy } = this.state;
-    const boards = [];
-    // Object.keys(works).forEach((key) => {
-    //   boards.push(
-    //     <Year key={`year${key}`} yyyy={key} year={works[key]} />
-    //   );
-    // });
+    const { works } = this.state;
+    const yyyy = this.props.params.selectedYear;
+
+    console.log(yyyy);
+
+    if (yyyy === 0) return (<div style={{ textAlign: 'center', fontWeight: 'bold', color: 'orange' }}> 메뉴를 선택해 주세요 </div>);
+
     return (
       <div>
         <Year key={`year${yyyy}`} yyyy={yyyy} year={works[yyyy]} />
@@ -30,4 +26,11 @@ class Portfolio extends Component {
   }
 }
 
-export default Portfolio;
+function map(state, ownProps) {
+  const {
+    portfolio,
+  } = state;
+  return Object.assign({}, portfolio, ownProps);
+}
+
+export default connect(map)(Portfolio);

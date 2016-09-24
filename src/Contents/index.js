@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import PortfolioHeader from './Header/PortfolioHeader';
 import Portfolio from './Portfolio';
 
@@ -13,15 +14,26 @@ const style = {
 };
 
 class Contents extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
-    console.log(this.props);
     return (
       <div style={style}>
         <PortfolioHeader />
-        <Portfolio />
+        { this.props.children }
       </div>
     );
   }
 }
 
-export default Contents;
+function map(state) {
+  const {
+    portfolio,
+  } = state;
+  return portfolio;
+}
+
+export default connect(map)(Contents);

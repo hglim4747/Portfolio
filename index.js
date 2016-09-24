@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const ejs = require('ejs');
+const moment = require('moment');
 const morgan = require('morgan');
 
 app.use((req, res, next) => {
+  console.log(moment().format('YYYY-MM-DD hh:mm:ss'));
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', true);
   res.header('Access-Control-Allow-Headers', 'Content-Type');

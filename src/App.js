@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Left from './Left';
-import Header from './Header';
+import TitleBar from './TitleBar';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
     return(
       <div>
         <div className="page-wrap">
-          <Header />
+          <TitleBar />
           <Left />
           { this.props.children }
         </div>
@@ -19,4 +20,11 @@ class App extends Component {
   }
 }
 
-export default App;
+function map(state) {
+  const {
+    portfolio,
+  } = state;
+  return portfolio;
+}
+
+export default connect(map)(App);

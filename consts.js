@@ -183,7 +183,7 @@ const y2014 = {
 const y2015 = {
   0: {
     name: 'Johnny',
-    filter: '14-Johnny',
+    filter: '14-Johnny(원격알람앱)',
     clipNum: 0,
     jpgNum: 2,
     type: '서버개발 및 안드로이드',
